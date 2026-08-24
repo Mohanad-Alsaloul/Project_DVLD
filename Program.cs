@@ -19,7 +19,7 @@ namespace Project_DVLD
             // Application.Run(new frmMain());
             //  Application.Run(new frmManagePeople());
             // Application.Run(new frmAddNewPerson());
-            Application.Run(new frmLogin());
+           Application.Run(new frmLogin());
         }
     }
 }

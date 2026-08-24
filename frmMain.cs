@@ -32,6 +32,13 @@ namespace Project_DVLD
             _ShowManageUsersScreen();
         }
 
+        private void tsmSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
 
+            frmLogin frmlogin = new frmLogin();
+
+            frmlogin.Show();
+        }
     }
 }

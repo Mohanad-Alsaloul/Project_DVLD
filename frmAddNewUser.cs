@@ -105,6 +105,13 @@ namespace Project_DVLD
             }
             else
                 errorProvider1.SetError(txtUserName, "");
+
+            if(clsUsers.IsUserExistByUserName(txtUserName.Text))
+            {
+                errorProvider1.SetError(txtUserName, "This username already exists! enter another username.");
+                return false;
+            }
+ 
             return true;
         }
 
@@ -144,11 +151,15 @@ namespace Project_DVLD
         {
             bool validateInput = true;
 
-            validateInput = (!_ValidationUserName()) ? false : true;
+           
+            if (!_ValidationUserName())
+                validateInput = false;
 
-            validateInput = (!_ValidationPassword()) ? false : true;
+            if(!_ValidationPassword())
+                validateInput = false;
 
-            validateInput = (!_ValidationConfirmPassword()) ? false : true;
+            if(!_ValidationConfirmPassword())
+                validateInput = false;
 
             return validateInput;
         }

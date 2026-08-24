@@ -131,6 +131,7 @@
             this.tsmSignOut.Name = "tsmSignOut";
             this.tsmSignOut.Size = new System.Drawing.Size(196, 38);
             this.tsmSignOut.Text = "Sign Out";
+            this.tsmSignOut.Click += new System.EventHandler(this.tsmSignOut_Click);
             // 
             // pictureBox1
             // 
