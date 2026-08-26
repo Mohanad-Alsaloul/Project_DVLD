@@ -106,7 +106,7 @@ namespace Project_DVLD
             else
                 errorProvider1.SetError(txtUserName, "");
 
-            if(clsUsers.IsUserExistByUserName(txtUserName.Text))
+            if(clsUsers.IsUserExistByUserName(txtUserName.Text) && Mode == enMode.AddNew)
             {
                 errorProvider1.SetError(txtUserName, "This username already exists! enter another username.");
                 return false;

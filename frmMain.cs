@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLDBusinessLayer;
+using System;
 using System.Windows.Forms;
 
 namespace Project_DVLD
@@ -39,6 +40,29 @@ namespace Project_DVLD
             frmLogin frmlogin = new frmLogin();
 
             frmlogin.Show();
+        }
+
+        private void tsmCurrentUserInfo_Click(object sender, EventArgs e)
+        {
+            frmUserInfo frmuserinfo = new frmUserInfo(clsUserLoginInfo.UserID);
+            frmuserinfo.ShowDialog();
+        }
+
+        private void tsmChangePassword_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frmchangepasswrod = new frmChangePassword(clsUserLoginInfo.UserID);
+            frmchangepasswrod.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageApplictionTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageApplictionTypes frmmanageapplicationsTypes = new frmManageApplictionTypes();
+            frmmanageapplicationsTypes.ShowDialog();
         }
     }
 }

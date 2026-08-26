@@ -36,18 +36,19 @@
             this.lblRecordNo = new System.Windows.Forms.Label();
             this.dgvManagePeople = new System.Windows.Forms.DataGridView();
             this.cmsListPeople = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtFilter = new System.Windows.Forms.TextBox();
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmAddNewPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbGendor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManagePeople)).BeginInit();
             this.cmsListPeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -151,25 +152,6 @@
             this.cmsListPeople.Name = "cmsListPeople";
             this.cmsListPeople.Size = new System.Drawing.Size(169, 208);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
-            // 
-            // txtFilter
-            // 
-            this.txtFilter.Location = new System.Drawing.Point(225, 151);
-            this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(153, 20);
-            this.txtFilter.TabIndex = 10;
-            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
-            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
-            // 
             // tsmShowDetails
             // 
             this.tsmShowDetails.Image = global::Project_DVLD.Properties.Resources.PersonDetails_32;
@@ -177,6 +159,11 @@
             this.tsmShowDetails.Size = new System.Drawing.Size(168, 32);
             this.tsmShowDetails.Text = "Show Details";
             this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
             // 
             // tsmAddNewPerson
             // 
@@ -202,6 +189,11 @@
             this.tsmDelete.Text = "Delete";
             this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
+            // 
             // tsmSendEmail
             // 
             this.tsmSendEmail.Image = global::Project_DVLD.Properties.Resources.send_email_32;
@@ -215,6 +207,15 @@
             this.tsmPhoneCall.Name = "tsmPhoneCall";
             this.tsmPhoneCall.Size = new System.Drawing.Size(168, 32);
             this.tsmPhoneCall.Text = "Phone Call";
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(225, 151);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(153, 20);
+            this.txtFilter.TabIndex = 10;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
             // btnClose
             // 
@@ -254,12 +255,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // cbGendor
+            // 
+            this.cbGendor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbGendor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGendor.FormattingEnabled = true;
+            this.cbGendor.Items.AddRange(new object[] {
+            "All",
+            "Male",
+            "Female"});
+            this.cbGendor.Location = new System.Drawing.Point(225, 151);
+            this.cbGendor.Name = "cbGendor";
+            this.cbGendor.Size = new System.Drawing.Size(77, 21);
+            this.cbGendor.TabIndex = 11;
+            this.cbGendor.SelectedIndexChanged += new System.EventHandler(this.cbGendor_SelectedIndexChanged);
+            // 
             // frmManagePeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1211, 450);
+            this.Controls.Add(this.cbGendor);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.dgvManagePeople);
             this.Controls.Add(this.btnClose);
@@ -302,5 +319,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.ComboBox cbGendor;
     }
 }

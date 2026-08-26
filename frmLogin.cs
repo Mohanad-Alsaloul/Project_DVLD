@@ -85,6 +85,23 @@ namespace Project_DVLD
                 return false;
                 
             }
+
+            if(!clsUsers.IsActiveUsername(username, 1))
+            {
+                MessageBox.Show("Your account has been deactivated! please contact the administrator.", "Inactive Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Focus();
+                return false;
+            }
+
+            clsUserLoginInfo.UserID = clsUsers.GetUserIDByUsername(username);
+
+            if(clsUserLoginInfo.UserID == -1)
+            {
+                MessageBox.Show("User Not Found", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Focus();
+                return false;
+            }
+
             string folderPath = @"D:\CoursC#\Project_DVLD";
 
             _CreateFileOrFolder(folderPath);

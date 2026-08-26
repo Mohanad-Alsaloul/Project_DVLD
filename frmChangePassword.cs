@@ -21,13 +21,12 @@ namespace Project_DVLD
             InitializeComponent();
         }
 
-        public frmChangePassword(int userID, int personID, string username, bool isActive)
+        public frmChangePassword(int userID)
         {
             InitializeComponent();
+
             ctrLoginPersonInformation1.UserID = userID;
-            ctrLoginPersonInformation1.PersonID = personID;
-            ctrLoginPersonInformation1.UserName = username;
-            ctrLoginPersonInformation1.IsActive = isActive;
+           // ctrLoginPersonInformation1.PersonID = personID;  
 
             this.userID = userID;
         }

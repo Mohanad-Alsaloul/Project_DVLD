@@ -116,17 +116,27 @@ namespace Project_DVLD
 
         private void _SelectCbFilterBy()
         {
-            if (cbFilterBy.SelectedIndex != 0)
+            if (cbFilterBy.SelectedIndex != 0 && cbFilterBy.SelectedIndex != 8)
             {
+                cbGendor.Visible = false;
                 txtFilter.Visible = true;
                 _ApplyFilter();
             }
             else
             {
                 txtFilter.Clear();
+                cbGendor.Visible = false;
                 txtFilter.Visible = false;
                 _RefreshManagePeople();
             }
+
+            if(cbFilterBy.SelectedIndex == 8)
+            {
+                cbGendor.Visible = true;
+                cbGendor.SelectedIndex = 0;
+                _ApplyFilter();
+            }
+
         }
 
         private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
@@ -172,6 +182,34 @@ namespace Project_DVLD
             try
             {
                 managePeopleDataView.RowFilter = $"[{columnNameFSTL}] like '{filterCondition}%'";
+            }
+            catch (Exception ex)
+            {
+                dgvManagePeople.DataSource = null;
+                return;
+            }
+            dgvManagePeople.DataSource = managePeopleDataView;
+        }
+
+        private void _FilterManagePeopleByGendor()
+        {
+            DataView managePeopleDataView = clsPeople.GetAllPeople().DefaultView;
+
+            try
+            {
+                switch (cbGendor.SelectedItem.ToString().ToLower())
+                {
+                    case "all":
+                        break;
+                    case "male":
+                        managePeopleDataView.RowFilter = $"[Gendor] = 'Male'";
+                        break;
+                    case "female":
+                        managePeopleDataView.RowFilter = $"[Gendor] = 'Female'";
+                        break;
+                    default:
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -263,7 +301,7 @@ namespace Project_DVLD
 
         private void _ApplyFilter()
         {
-            if (!string.IsNullOrEmpty(txtFilter.Text))
+            if (!string.IsNullOrEmpty(txtFilter.Text) || cbGendor.Visible == true)
             {
                 switch (cbFilterBy.SelectedItem.ToString().ToLower())
                 {
@@ -279,11 +317,16 @@ namespace Project_DVLD
                     case "second name":
                     case "third name":
                     case "last name":
-                    case "nationality":
-                    case "gendor":
+                    case "nationality":               
                         _FilterManagePeopleNameFSTL(cbFilterBy.Text, txtFilter.Text);
                         _CountRecordPeople();
                         break;
+
+                    case "gendor":
+                        _FilterManagePeopleByGendor();
+                        _CountRecordPeople();
+                        break;
+
                     case "phone":
                         _FilterManagePeopleByPhone(txtFilter.Text);
                         _CountRecordPeople();
@@ -303,6 +346,11 @@ namespace Project_DVLD
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            _ApplyFilter();
+        }
+
+        private void cbGendor_SelectedIndexChanged(object sender, EventArgs e)
         {
             _ApplyFilter();
         }

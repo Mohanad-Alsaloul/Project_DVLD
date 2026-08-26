@@ -170,14 +170,12 @@
             // ctrLoginPersonInformation1
             // 
             this.ctrLoginPersonInformation1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ctrLoginPersonInformation1.IsActive = false;
             this.ctrLoginPersonInformation1.Location = new System.Drawing.Point(6, 12);
             this.ctrLoginPersonInformation1.Name = "ctrLoginPersonInformation1";
             this.ctrLoginPersonInformation1.PersonID = 0;
             this.ctrLoginPersonInformation1.Size = new System.Drawing.Size(736, 308);
             this.ctrLoginPersonInformation1.TabIndex = 71;
             this.ctrLoginPersonInformation1.UserID = 0;
-            this.ctrLoginPersonInformation1.UserName = null;
             // 
             // frmChangePassword
             // 

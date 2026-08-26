@@ -22,14 +22,12 @@ namespace Project_DVLD
             this.FindForm().Close();
         }
 
-        public frmUserInfo(int userID, int personID, string username, bool isActive)
+        public frmUserInfo(int userID)
         {
             InitializeComponent();
 
             ctrLoginPersonInformation1.UserID = userID;
-            ctrLoginPersonInformation1.PersonID = personID;
-            ctrLoginPersonInformation1.UserName = username;
-            ctrLoginPersonInformation1.IsActive = isActive;
+            //ctrLoginPersonInformation1.PersonID = personID;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLDBusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,22 +13,61 @@ namespace Project_DVLD
 {
     public partial class ctrLoginPersonInformation : UserControl
     {
-        public int UserID { set; get; }
+        public int UserID 
+        {
+            get
+            {
+                return _UserID;
+            }
+
+            set
+            {
+                _UserID = value;
+
+                if (_UserID >= 0)
+                    _LoadData();
+                else
+                    MessageBox.Show("Not Found User Info.", "Not Found User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public int PersonID { set; get; }
-        public string UserName { set; get; }
-        public bool IsActive { set; get; }
-        //public int PersonID 
-        //{
-        //    set
-        //    {
-        //        ctrPersonDetails1.PersonID = value;
-        //    }
-               
-        //}
+
+        private clsUsers _User;
+
+        private int _UserID;
 
         public ctrLoginPersonInformation()
         {
             InitializeComponent();
+        }
+
+        private bool _IsUserExist()
+        {
+            _User = clsUsers.Find(_UserID);
+            return (_User != null);
+        }
+
+        private void _LoadData()
+        {
+            _InitializUserDetailsData();
+        }
+
+        private void _InitializUserDetailsData()
+        {
+            if (!_IsUserExist())
+            {
+                return;
+            }
+
+            lblUserID.Text = _UserID.ToString();
+            lblUserName.Text = _User.UserName;
+            ctrPersonDetails1.PersonID = _User.PersonID;
+
+            if (_User.IsActive == 1)
+                lblIsActive.Text = "Yes";
+            else
+                lblIsActive.Text = "No";
         }
 
         public ctrLoginPersonInformation(int userID, int personID)
@@ -38,14 +78,7 @@ namespace Project_DVLD
 
         private void ctrLoginPersonInformation_Load(object sender, EventArgs e)
         {
-            ctrPersonDetails1.PersonID = PersonID;
-            lblUserID.Text = UserID.ToString();
-            lblUserName.Text = UserName;
-
-            if(IsActive)
-            lblIsActive.Text = "Yes";
-            else
-                lblIsActive.Text = "No";
+           // ctrPersonDetails1.PersonID = PersonID;        
         }
     }
 }

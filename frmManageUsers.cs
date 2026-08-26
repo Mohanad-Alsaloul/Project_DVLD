@@ -249,7 +249,7 @@ namespace Project_DVLD
 
         private void tsmShowDetalis_Click(object sender, EventArgs e)
         {
-            frmUserInfo frmuserinfo = new frmUserInfo(_GetUserIDInDGV(),_GetPersonIDInDGV(), _GetUserNameInDGV(),_GetIsActiveInDGV());
+            frmUserInfo frmuserinfo = new frmUserInfo(_GetUserIDInDGV());
             frmuserinfo.ShowDialog();
             _RefreshManageUsers();
         }
@@ -299,7 +299,7 @@ namespace Project_DVLD
 
         private void tsmChangePassword_Click(object sender, EventArgs e)
         {
-           frmChangePassword frmchangepassword = new frmChangePassword(_GetUserIDInDGV(), _GetPersonIDInDGV(), _GetUserNameInDGV(), _GetIsActiveInDGV());
+           frmChangePassword frmchangepassword = new frmChangePassword(_GetUserIDInDGV());
             frmchangepassword.ShowDialog();
             _RefreshManageUsers();
         }
