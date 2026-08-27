@@ -142,6 +142,7 @@
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(231, 46);
             this.toolStripMenuItem7.Text = "Manage Text Types";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // peopleToolStripMenuItem
             // 
@@ -184,7 +185,7 @@
             this.tsmCurrentUserInfo.Image = global::Project_DVLD.Properties.Resources.PersonDetails_32;
             this.tsmCurrentUserInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmCurrentUserInfo.Name = "tsmCurrentUserInfo";
-            this.tsmCurrentUserInfo.Size = new System.Drawing.Size(196, 38);
+            this.tsmCurrentUserInfo.Size = new System.Drawing.Size(183, 38);
             this.tsmCurrentUserInfo.Text = "Current User Info";
             this.tsmCurrentUserInfo.Click += new System.EventHandler(this.tsmCurrentUserInfo_Click);
             // 
@@ -193,7 +194,7 @@
             this.tsmChangePassword.Image = global::Project_DVLD.Properties.Resources.Password_32;
             this.tsmChangePassword.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmChangePassword.Name = "tsmChangePassword";
-            this.tsmChangePassword.Size = new System.Drawing.Size(196, 38);
+            this.tsmChangePassword.Size = new System.Drawing.Size(183, 38);
             this.tsmChangePassword.Text = "Change Password";
             this.tsmChangePassword.Click += new System.EventHandler(this.tsmChangePassword_Click);
             // 
@@ -202,7 +203,7 @@
             this.tsmSignOut.Image = global::Project_DVLD.Properties.Resources.sign_out_32__2;
             this.tsmSignOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmSignOut.Name = "tsmSignOut";
-            this.tsmSignOut.Size = new System.Drawing.Size(196, 38);
+            this.tsmSignOut.Size = new System.Drawing.Size(183, 38);
             this.tsmSignOut.Text = "Sign Out";
             this.tsmSignOut.Click += new System.EventHandler(this.tsmSignOut_Click);
             // 

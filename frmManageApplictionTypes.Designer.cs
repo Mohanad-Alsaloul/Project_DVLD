@@ -32,9 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvManageApplictionTypes = new System.Windows.Forms.DataGridView();
+            this.msManageApplicationTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblRecords = new System.Windows.Forms.Label();
             this.lblRecordNo = new System.Windows.Forms.Label();
-            this.msManageApplicationTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.tsmEditApplicationType = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -78,6 +78,13 @@
             this.dgvManageApplictionTypes.Size = new System.Drawing.Size(537, 220);
             this.dgvManageApplictionTypes.TabIndex = 2;
             // 
+            // msManageApplicationTypes
+            // 
+            this.msManageApplicationTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmEditApplicationType});
+            this.msManageApplicationTypes.Name = "msManageApplicationTypes";
+            this.msManageApplicationTypes.Size = new System.Drawing.Size(202, 64);
+            // 
             // lblRecords
             // 
             this.lblRecords.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -98,13 +105,6 @@
             this.lblRecordNo.TabIndex = 18;
             this.lblRecordNo.Text = "3";
             // 
-            // msManageApplicationTypes
-            // 
-            this.msManageApplicationTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmEditApplicationType});
-            this.msManageApplicationTypes.Name = "msManageApplicationTypes";
-            this.msManageApplicationTypes.Size = new System.Drawing.Size(186, 26);
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -117,12 +117,14 @@
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tsmEditApplicationType
             // 
             this.tsmEditApplicationType.Image = global::Project_DVLD.Properties.Resources.edit_32;
+            this.tsmEditApplicationType.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmEditApplicationType.Name = "tsmEditApplicationType";
-            this.tsmEditApplicationType.Size = new System.Drawing.Size(185, 22);
+            this.tsmEditApplicationType.Size = new System.Drawing.Size(201, 38);
             this.tsmEditApplicationType.Text = "Edit Application Type";
             this.tsmEditApplicationType.Click += new System.EventHandler(this.tsmEditApplicationType_Click);
             // 

@@ -64,5 +64,10 @@ namespace Project_DVLD
             frmManageApplictionTypes frmmanageapplicationsTypes = new frmManageApplictionTypes();
             frmmanageapplicationsTypes.ShowDialog();
         }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

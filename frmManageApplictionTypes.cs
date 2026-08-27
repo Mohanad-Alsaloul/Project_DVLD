@@ -34,6 +34,10 @@ namespace Project_DVLD
             _CountRecordUsers();
         }
 
+        private int _GetApplictionTypesIDInDGV()
+        {
+            return (int)dgvManageApplictionTypes.CurrentRow.Cells[0].Value;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -47,8 +51,18 @@ namespace Project_DVLD
 
         private void tsmEditApplicationType_Click(object sender, EventArgs e)
         {
-            frmUpdateManageApplicationType frmupdateapplicationtype = new frmUpdateManageApplicationType();
+            
+            frmUpdateManageApplicationType frmupdateapplicationtype = new frmUpdateManageApplicationType(_GetApplictionTypesIDInDGV());
             frmupdateapplicationtype.ShowDialog();
+            _RefreshManageApplictionTypes();
+        }
+        private void _CloseForm()
+        {
+            this.FindForm().Close();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _CloseForm();
         }
     }
 }
