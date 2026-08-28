@@ -54,10 +54,7 @@ namespace Project_DVLD
             frmchangepasswrod.ShowDialog();
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void manageApplictionTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -65,9 +62,10 @@ namespace Project_DVLD
             frmmanageapplicationsTypes.ShowDialog();
         }
 
-        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        private void tsmManageTestType_Click(object sender, EventArgs e)
         {
-
+            frmManageTestTypes frmmanagetesttypes = new frmManageTestTypes();
+            frmmanagetesttypes.ShowDialog();
         }
     }
 }

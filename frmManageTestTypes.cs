@@ -13,9 +13,11 @@ namespace Project_DVLD
 {
     public partial class frmManageTestTypes : Form
     {
+     
         public frmManageTestTypes()
         {
             InitializeComponent();
+           
         }
 
         private int _CountManageTestTypes()
@@ -42,6 +44,24 @@ namespace Project_DVLD
         private void frmManageTestTypes_Load(object sender, EventArgs e)
         {
             _RefreshManageTestTypes();
+        }
+        private int _GetTestTypesIDInDGV()
+        {
+            return (int)dgvManageTestTypes.CurrentRow.Cells[0].Value;
+        }
+        private void tsmEditApplicationType_Click(object sender, EventArgs e)
+        {
+            frmUpdateManageTestType frmupdatemanagetesttype = new frmUpdateManageTestType(_GetTestTypesIDInDGV());
+            frmupdatemanagetesttype.ShowDialog();
+            _RefreshManageTestTypes();
+        }
+        private void _CloseForm()
+        {
+            this.FindForm().Close();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _CloseForm();
         }
     }
 }

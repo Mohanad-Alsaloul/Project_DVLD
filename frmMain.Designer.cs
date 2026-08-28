@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.msMainMenu = new System.Windows.Forms.MenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drivingLicenceServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDrivingLicenceService = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.detainLicencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageApplictionTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.driversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDetainLicences = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageApplictionTypes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageTestType = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPeople = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDrivers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmUsers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAccountSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCurrentUserInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSignOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.msMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,11 +56,11 @@
             this.msMainMenu.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMainMenu.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.msMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.applicationsToolStripMenuItem,
-            this.peopleToolStripMenuItem,
-            this.driversToolStripMenuItem,
-            this.usersToolStripMenuItem,
-            this.accountSettingsToolStripMenuItem});
+            this.tsmApplications,
+            this.tsmPeople,
+            this.tsmDrivers,
+            this.tsmUsers,
+            this.tsmAccountSettings});
             this.msMainMenu.Location = new System.Drawing.Point(0, 0);
             this.msMainMenu.Name = "msMainMenu";
             this.msMainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -68,117 +68,105 @@
             this.msMainMenu.TabIndex = 0;
             this.msMainMenu.Text = "msMainMenu";
             // 
-            // pictureBox1
+            // tsmApplications
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::Project_DVLD.Properties.Resources.DVLD_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(213, 116);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 292);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // applicationsToolStripMenuItem
-            // 
-            this.applicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.drivingLicenceServiceToolStripMenuItem,
+            this.tsmApplications.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmDrivingLicenceService,
             this.toolStripMenuItem1,
-            this.toolStripMenuItem4,
+            this.tsmManageApplications,
             this.toolStripMenuItem2,
-            this.detainLicencesToolStripMenuItem,
-            this.manageApplictionTypesToolStripMenuItem,
-            this.toolStripMenuItem7});
-            this.applicationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applicationsToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Applications_64;
-            this.applicationsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
-            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(124, 56);
-            this.applicationsToolStripMenuItem.Text = "&Applications";
+            this.tsmDetainLicences,
+            this.tsmManageApplictionTypes,
+            this.tsmManageTestType});
+            this.tsmApplications.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmApplications.Image = global::Project_DVLD.Properties.Resources.Applications_64;
+            this.tsmApplications.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.tsmApplications.Name = "tsmApplications";
+            this.tsmApplications.Size = new System.Drawing.Size(124, 56);
+            this.tsmApplications.Text = "&Applications";
             // 
-            // drivingLicenceServiceToolStripMenuItem
+            // tsmDrivingLicenceService
             // 
-            this.drivingLicenceServiceToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Driver_License_48;
-            this.drivingLicenceServiceToolStripMenuItem.Name = "drivingLicenceServiceToolStripMenuItem";
-            this.drivingLicenceServiceToolStripMenuItem.Size = new System.Drawing.Size(231, 46);
-            this.drivingLicenceServiceToolStripMenuItem.Text = "Driving Licences Services";
+            this.tsmDrivingLicenceService.Image = global::Project_DVLD.Properties.Resources.Driver_License_48;
+            this.tsmDrivingLicenceService.Name = "tsmDrivingLicenceService";
+            this.tsmDrivingLicenceService.Size = new System.Drawing.Size(231, 46);
+            this.tsmDrivingLicenceService.Text = "Driving Licences Services";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 6);
             // 
-            // toolStripMenuItem4
+            // tsmManageApplications
             // 
-            this.toolStripMenuItem4.Image = global::Project_DVLD.Properties.Resources.Manage_Applications_32;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(231, 46);
-            this.toolStripMenuItem4.Text = "Manage Applications";
+            this.tsmManageApplications.Image = global::Project_DVLD.Properties.Resources.Manage_Applications_32;
+            this.tsmManageApplications.Name = "tsmManageApplications";
+            this.tsmManageApplications.Size = new System.Drawing.Size(231, 46);
+            this.tsmManageApplications.Text = "Manage Applications";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(228, 6);
             // 
-            // detainLicencesToolStripMenuItem
+            // tsmDetainLicences
             // 
-            this.detainLicencesToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Detain_32;
-            this.detainLicencesToolStripMenuItem.Name = "detainLicencesToolStripMenuItem";
-            this.detainLicencesToolStripMenuItem.Size = new System.Drawing.Size(231, 46);
-            this.detainLicencesToolStripMenuItem.Text = "Detain Licences";
+            this.tsmDetainLicences.Image = global::Project_DVLD.Properties.Resources.Detain_32;
+            this.tsmDetainLicences.Name = "tsmDetainLicences";
+            this.tsmDetainLicences.Size = new System.Drawing.Size(231, 46);
+            this.tsmDetainLicences.Text = "Detain Licences";
             // 
-            // manageApplictionTypesToolStripMenuItem
+            // tsmManageApplictionTypes
             // 
-            this.manageApplictionTypesToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Application_Types_64;
-            this.manageApplictionTypesToolStripMenuItem.Name = "manageApplictionTypesToolStripMenuItem";
-            this.manageApplictionTypesToolStripMenuItem.Size = new System.Drawing.Size(231, 46);
-            this.manageApplictionTypesToolStripMenuItem.Text = "Manage Appliction Types";
-            this.manageApplictionTypesToolStripMenuItem.Click += new System.EventHandler(this.manageApplictionTypesToolStripMenuItem_Click);
+            this.tsmManageApplictionTypes.Image = global::Project_DVLD.Properties.Resources.Application_Types_64;
+            this.tsmManageApplictionTypes.Name = "tsmManageApplictionTypes";
+            this.tsmManageApplictionTypes.Size = new System.Drawing.Size(231, 46);
+            this.tsmManageApplictionTypes.Text = "Manage Appliction Types";
+            this.tsmManageApplictionTypes.Click += new System.EventHandler(this.manageApplictionTypesToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem7
+            // tsmManageTestType
             // 
-            this.toolStripMenuItem7.Image = global::Project_DVLD.Properties.Resources.TestType_32;
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(231, 46);
-            this.toolStripMenuItem7.Text = "Manage Text Types";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            this.tsmManageTestType.Image = global::Project_DVLD.Properties.Resources.TestType_32;
+            this.tsmManageTestType.Name = "tsmManageTestType";
+            this.tsmManageTestType.Size = new System.Drawing.Size(231, 46);
+            this.tsmManageTestType.Text = "Manage Text Types";
+            this.tsmManageTestType.Click += new System.EventHandler(this.tsmManageTestType_Click);
             // 
-            // peopleToolStripMenuItem
+            // tsmPeople
             // 
-            this.peopleToolStripMenuItem.AutoSize = false;
-            this.peopleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.peopleToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.People_64;
-            this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(122, 50);
-            this.peopleToolStripMenuItem.Text = "&People";
-            this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
+            this.tsmPeople.AutoSize = false;
+            this.tsmPeople.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmPeople.Image = global::Project_DVLD.Properties.Resources.People_64;
+            this.tsmPeople.Name = "tsmPeople";
+            this.tsmPeople.Size = new System.Drawing.Size(122, 50);
+            this.tsmPeople.Text = "&People";
+            this.tsmPeople.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
-            // driversToolStripMenuItem
+            // tsmDrivers
             // 
-            this.driversToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Drivers_64;
-            this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
-            this.driversToolStripMenuItem.Size = new System.Drawing.Size(95, 56);
-            this.driversToolStripMenuItem.Text = "&Drivers";
+            this.tsmDrivers.Image = global::Project_DVLD.Properties.Resources.Drivers_64;
+            this.tsmDrivers.Name = "tsmDrivers";
+            this.tsmDrivers.Size = new System.Drawing.Size(95, 56);
+            this.tsmDrivers.Text = "&Drivers";
             // 
-            // usersToolStripMenuItem
+            // tsmUsers
             // 
-            this.usersToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Users_2_64;
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(87, 56);
-            this.usersToolStripMenuItem.Text = "&Users";
-            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            this.tsmUsers.Image = global::Project_DVLD.Properties.Resources.Users_2_64;
+            this.tsmUsers.Name = "tsmUsers";
+            this.tsmUsers.Size = new System.Drawing.Size(87, 56);
+            this.tsmUsers.Text = "&Users";
+            this.tsmUsers.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
-            // accountSettingsToolStripMenuItem
+            // tsmAccountSettings
             // 
-            this.accountSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAccountSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmCurrentUserInfo,
             this.tsmChangePassword,
             this.tsmSignOut});
-            this.accountSettingsToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.account_settings_64;
-            this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
-            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(147, 56);
-            this.accountSettingsToolStripMenuItem.Text = "Account &Settings";
+            this.tsmAccountSettings.Image = global::Project_DVLD.Properties.Resources.account_settings_64;
+            this.tsmAccountSettings.Name = "tsmAccountSettings";
+            this.tsmAccountSettings.Size = new System.Drawing.Size(147, 56);
+            this.tsmAccountSettings.Text = "Account &Settings";
             // 
             // tsmCurrentUserInfo
             // 
@@ -207,6 +195,18 @@
             this.tsmSignOut.Text = "Sign Out";
             this.tsmSignOut.Click += new System.EventHandler(this.tsmSignOut_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::Project_DVLD.Properties.Resources.DVLD_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(213, 116);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(360, 292);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,22 +230,22 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip msMainMenu;
-        private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem driversToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accountSettingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmPeople;
+        private System.Windows.Forms.ToolStripMenuItem tsmDrivers;
+        private System.Windows.Forms.ToolStripMenuItem tsmUsers;
+        private System.Windows.Forms.ToolStripMenuItem tsmAccountSettings;
+        private System.Windows.Forms.ToolStripMenuItem tsmApplications;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem drivingLicenceServiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmDrivingLicenceService;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem detainLicencesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageApplictionTypesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem tsmDetainLicences;
+        private System.Windows.Forms.ToolStripMenuItem tsmManageApplictionTypes;
+        private System.Windows.Forms.ToolStripMenuItem tsmManageTestType;
         private System.Windows.Forms.ToolStripMenuItem tsmCurrentUserInfo;
         private System.Windows.Forms.ToolStripMenuItem tsmChangePassword;
         private System.Windows.Forms.ToolStripMenuItem tsmSignOut;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem tsmManageApplications;
     }
 }
 

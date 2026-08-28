@@ -63,6 +63,7 @@ namespace Project_DVLD
         private void btnClose_Click(object sender, EventArgs e)
         {
             _CloseForm();
+           
         }
     }
 }

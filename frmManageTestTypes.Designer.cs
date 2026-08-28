@@ -29,27 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvManageTestTypes = new System.Windows.Forms.DataGridView();
+            this.msManageTestTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmEditApplicationType = new System.Windows.Forms.ToolStripMenuItem();
             this.lblRecordNo = new System.Windows.Forms.Label();
             this.lblRecords = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.msManageTestTypes = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmEditApplicationType = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageTestTypes)).BeginInit();
             this.msManageTestTypes.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Project_DVLD.Properties.Resources.TestType_512;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(260, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 126);
-            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -67,23 +58,40 @@
             this.dgvManageTestTypes.AllowUserToAddRows = false;
             this.dgvManageTestTypes.AllowUserToDeleteRows = false;
             this.dgvManageTestTypes.AllowUserToOrderColumns = true;
-            this.dgvManageTestTypes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvManageTestTypes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvManageTestTypes.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvManageTestTypes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvManageTestTypes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvManageTestTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvManageTestTypes.ContextMenuStrip = this.msManageTestTypes;
             this.dgvManageTestTypes.Location = new System.Drawing.Point(12, 197);
             this.dgvManageTestTypes.Name = "dgvManageTestTypes";
             this.dgvManageTestTypes.ReadOnly = true;
             this.dgvManageTestTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvManageTestTypes.Size = new System.Drawing.Size(649, 220);
             this.dgvManageTestTypes.TabIndex = 3;
+            // 
+            // msManageTestTypes
+            // 
+            this.msManageTestTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmEditApplicationType});
+            this.msManageTestTypes.Name = "msManageApplicationTypes";
+            this.msManageTestTypes.Size = new System.Drawing.Size(161, 42);
+            // 
+            // tsmEditApplicationType
+            // 
+            this.tsmEditApplicationType.Image = global::Project_DVLD.Properties.Resources.edit_32;
+            this.tsmEditApplicationType.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmEditApplicationType.Name = "tsmEditApplicationType";
+            this.tsmEditApplicationType.Size = new System.Drawing.Size(160, 38);
+            this.tsmEditApplicationType.Text = "Edit Test Type";
+            this.tsmEditApplicationType.Click += new System.EventHandler(this.tsmEditApplicationType_Click);
             // 
             // lblRecordNo
             // 
@@ -117,21 +125,16 @@
             this.btnClose.TabIndex = 19;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // msManageTestTypes
+            // panel1
             // 
-            this.msManageTestTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmEditApplicationType});
-            this.msManageTestTypes.Name = "msManageApplicationTypes";
-            this.msManageTestTypes.Size = new System.Drawing.Size(161, 42);
-            // 
-            // tsmEditApplicationType
-            // 
-            this.tsmEditApplicationType.Image = global::Project_DVLD.Properties.Resources.edit_32;
-            this.tsmEditApplicationType.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmEditApplicationType.Name = "tsmEditApplicationType";
-            this.tsmEditApplicationType.Size = new System.Drawing.Size(160, 38);
-            this.tsmEditApplicationType.Text = "Edit Test Type";
+            this.panel1.BackgroundImage = global::Project_DVLD.Properties.Resources.TestType_512;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(260, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(167, 126);
+            this.panel1.TabIndex = 1;
             // 
             // frmManageTestTypes
             // 
