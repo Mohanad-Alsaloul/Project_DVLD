@@ -8,6 +8,8 @@ namespace Project_DVLD
 {
     public partial class frmLogin : Form
     {
+        public static string UserName { set; get; }
+
         public frmLogin()
         {
             InitializeComponent();
@@ -94,8 +96,9 @@ namespace Project_DVLD
             }
 
             clsUserLoginInfo.UserID = clsUsers.GetUserIDByUsername(username);
+            UserName = username;
 
-            if(clsUserLoginInfo.UserID == -1)
+            if (clsUserLoginInfo.UserID == -1)
             {
                 MessageBox.Show("User Not Found", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsername.Focus();

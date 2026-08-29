@@ -43,11 +43,13 @@ D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmAddNewUser.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmChangePassword.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmLogin.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmMain.resources
+D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmManageTestTypes.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmUpdateManageApplicationType.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmManageApplictionTypes.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmManagePeople.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmManageUsers.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmPersonDetails.resources
+D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmUpdateManageTestType.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmUserInfo.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.Properties.Resources.resources
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.csproj.GenerateResource.cache
@@ -56,5 +58,4 @@ D:\CoursC#\Project_DVLD\obj\Debug\Project_.C749FC80.Up2Date
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.exe
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.pdb
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.exe.config
-D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmManageTestTypes.resources
-D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmUpdateManageTestType.resources
+D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmNewLocalDrivingLicenseApplication.resources
