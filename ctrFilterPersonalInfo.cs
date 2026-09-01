@@ -17,7 +17,7 @@ namespace Project_DVLD
         }
 
         public int PersonIDf { set; get; } = -1;
-
+        public string NationalNo { set; get; } = "";
         public ctrFilterPersonalInfo()
         {
             InitializeComponent();
@@ -84,6 +84,7 @@ namespace Project_DVLD
                 return;
             }
             ctrPersonDetails2.NationalNo = txtpiFindBy.Text;
+            NationalNo = ctrPersonDetails2.NationalNo;
             frmAddNewUser.PersonIDNext = ctrPersonDetails2.PersonID;
             PersonIDf = ctrPersonDetails2.PersonID;
             if (ctrPersonDetails2.PersonID == -1)
