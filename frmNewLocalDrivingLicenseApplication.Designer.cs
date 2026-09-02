@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblAddEditLDLApplication = new System.Windows.Forms.Label();
-            this.tcApplicationInfo = new System.Windows.Forms.TabControl();
+            this.tcPesronInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
             this.ctrFilterPersonalInfo1 = new Project_DVLD.ctrFilterPersonalInfo();
             this.btnNext = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.tcApplicationInfo.SuspendLayout();
+            this.tcPesronInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpApplicationInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -72,15 +72,15 @@
             this.lblAddEditLDLApplication.TabIndex = 2;
             this.lblAddEditLDLApplication.Text = "New Local Driving License Application";
             // 
-            // tcApplicationInfo
+            // tcPesronInfo
             // 
-            this.tcApplicationInfo.Controls.Add(this.tpPersonalInfo);
-            this.tcApplicationInfo.Controls.Add(this.tpApplicationInfo);
-            this.tcApplicationInfo.Location = new System.Drawing.Point(12, 94);
-            this.tcApplicationInfo.Name = "tcApplicationInfo";
-            this.tcApplicationInfo.SelectedIndex = 0;
-            this.tcApplicationInfo.Size = new System.Drawing.Size(752, 382);
-            this.tcApplicationInfo.TabIndex = 5;
+            this.tcPesronInfo.Controls.Add(this.tpPersonalInfo);
+            this.tcPesronInfo.Controls.Add(this.tpApplicationInfo);
+            this.tcPesronInfo.Location = new System.Drawing.Point(12, 94);
+            this.tcPesronInfo.Name = "tcPesronInfo";
+            this.tcPesronInfo.SelectedIndex = 0;
+            this.tcPesronInfo.Size = new System.Drawing.Size(752, 382);
+            this.tcPesronInfo.TabIndex = 5;
             // 
             // tpPersonalInfo
             // 
@@ -307,6 +307,7 @@
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -331,13 +332,13 @@
             this.ClientSize = new System.Drawing.Size(774, 520);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.tcApplicationInfo);
+            this.Controls.Add(this.tcPesronInfo);
             this.Controls.Add(this.lblAddEditLDLApplication);
             this.Name = "frmNewLocalDrivingLicenseApplication";
             this.ShowIcon = false;
             this.Text = "New Local Driving License Application";
             this.Load += new System.EventHandler(this.frmNewLocalDrivingLicenseApplication_Load);
-            this.tcApplicationInfo.ResumeLayout(false);
+            this.tcPesronInfo.ResumeLayout(false);
             this.tpPersonalInfo.ResumeLayout(false);
             this.tpApplicationInfo.ResumeLayout(false);
             this.tpApplicationInfo.PerformLayout();
@@ -354,7 +355,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblAddEditLDLApplication;
-        private System.Windows.Forms.TabControl tcApplicationInfo;
+        private System.Windows.Forms.TabControl tcPesronInfo;
         private System.Windows.Forms.TabPage tpPersonalInfo;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.TabPage tpApplicationInfo;

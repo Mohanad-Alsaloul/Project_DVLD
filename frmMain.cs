@@ -73,5 +73,11 @@ namespace Project_DVLD
             frmNewLocalDrivingLicenseApplication frmnewlocaldriving = new frmNewLocalDrivingLicenseApplication();
             frmnewlocaldriving.ShowDialog();
         }
+
+        private void tsmLocalDrivingLicenseApplications_Click(object sender, EventArgs e)
+        {
+            frmLDLApplications ldlapplication = new frmLDLApplications();
+            ldlapplication.ShowDialog();
+        }
     }
 }

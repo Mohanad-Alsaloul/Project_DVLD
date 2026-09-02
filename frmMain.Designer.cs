@@ -41,6 +41,8 @@
             this.tsmRetakeTest = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmManageApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmLocalDrivingLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInternationalLicenseApplications = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmDetainLicences = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageApplictionTypes = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,10 +188,30 @@
             // 
             // tsmManageApplications
             // 
+            this.tsmManageApplications.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmLocalDrivingLicenseApplications,
+            this.tsmInternationalLicenseApplications});
             this.tsmManageApplications.Image = global::Project_DVLD.Properties.Resources.Manage_Applications_32;
             this.tsmManageApplications.Name = "tsmManageApplications";
             this.tsmManageApplications.Size = new System.Drawing.Size(231, 46);
             this.tsmManageApplications.Text = "Manage Applications";
+            // 
+            // tsmLocalDrivingLicenseApplications
+            // 
+            this.tsmLocalDrivingLicenseApplications.Image = global::Project_DVLD.Properties.Resources.LocalDriving_License;
+            this.tsmLocalDrivingLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmLocalDrivingLicenseApplications.Name = "tsmLocalDrivingLicenseApplications";
+            this.tsmLocalDrivingLicenseApplications.Size = new System.Drawing.Size(269, 38);
+            this.tsmLocalDrivingLicenseApplications.Text = "Local Driving License Applications";
+            this.tsmLocalDrivingLicenseApplications.Click += new System.EventHandler(this.tsmLocalDrivingLicenseApplications_Click);
+            // 
+            // tsmInternationalLicenseApplications
+            // 
+            this.tsmInternationalLicenseApplications.Image = global::Project_DVLD.Properties.Resources.International_32;
+            this.tsmInternationalLicenseApplications.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmInternationalLicenseApplications.Name = "tsmInternationalLicenseApplications";
+            this.tsmInternationalLicenseApplications.Size = new System.Drawing.Size(269, 38);
+            this.tsmInternationalLicenseApplications.Text = "International License Applications ";
             // 
             // toolStripMenuItem2
             // 
@@ -341,6 +363,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmRetakeTest;
         private System.Windows.Forms.ToolStripMenuItem tsmLocalLicense;
         private System.Windows.Forms.ToolStripMenuItem tsmInternationalLicense;
+        private System.Windows.Forms.ToolStripMenuItem tsmLocalDrivingLicenseApplications;
+        private System.Windows.Forms.ToolStripMenuItem tsmInternationalLicenseApplications;
     }
 }
 

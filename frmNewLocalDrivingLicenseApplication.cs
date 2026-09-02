@@ -32,7 +32,7 @@ namespace Project_DVLD
             if(Mode == enMode.AddNew)
             {
                 _InitializeApplicationInfo();
-                tcApplicationInfo.SelectedIndex = 1;
+                tcPesronInfo.SelectedIndex = 1;
                 btnSave.Enabled = true;
                 _prePersonID = ctrFilterPersonalInfo1.PersonIDf;
                 return;
@@ -41,12 +41,15 @@ namespace Project_DVLD
             if(Mode == enMode.Update && ctrFilterPersonalInfo1.PersonIDf == _prePersonID)
             {
                 lblAddEditLDLApplication.Text = "Update Local Driving License Application";
-                tcApplicationInfo.SelectedIndex = 1;
+                tcPesronInfo.SelectedIndex = 1;
                 btnSave.Enabled = true;
                 return;
             }
+
+            Mode = enMode.AddNew;
             _InitializeApplicationInfo();
-            tcApplicationInfo.SelectedIndex = 1;
+            lblDLApplicationID.Text = "[???]";
+            tcPesronInfo.SelectedIndex = 1;
             btnSave.Enabled = true;
         }
 
@@ -76,11 +79,12 @@ namespace Project_DVLD
             _Application.LastStatusDate = Convert.ToDateTime(lblApplictionDate.Text);
             _Application.PaidFees = Convert.ToInt16(lblApplicationFees.Text);
             _Application.CreatedByUserID = clsUserLoginInfo.UserID;
+            _Application.Save();
+
         }
 
         private void _FillLDLApplicationData()
-        {
-            _Application.AddApplication();
+        {       
             _LDLApplication = new clsLDLApplications();
             _LDLApplication.ApplicationID = _Application.ApplicationID;
             _LDLApplication.LicenseClassID = clsLicenseClasses.GetLicensesClassesIDByClassName(cbLicenseClass.Text);
@@ -103,23 +107,50 @@ namespace Project_DVLD
             MessageBox.Show("Data Save Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void _CloseForm()
+        {
+            this.FindForm().Close();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (Mode == enMode.Update && ctrFilterPersonalInfo1.PersonIDf != _prePersonID)
+            {
+                MessageBox.Show("Press on the button Next", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Mode = enMode.AddNew;
+
+                lblAddEditLDLApplication.Text = "New Local Driving License Application";
+                lblApplictionDate.Text = DateTime.Today.ToShortDateString();
+                _GetAllLicenseClasses();
+                lblApplicationFees.Text = "15";
+                lblCreatedBy.Text = frmLogin.UserName;
+
+                lblDLApplicationID.Text = "[???]";
+                tcPesronInfo.SelectedIndex = 0;
+                btnSave.Enabled = true;
+                return;
+            }
+
             if (clsLDLApplications.IsLDLApplicationExist(ctrFilterPersonalInfo1.NationalNo, cbLicenseClass.Text, "New"))
             {
                 _MessageSelectAnotherLicenseClass();
                 return;
             }
 
-            if(Mode == enMode.AddNew)
+            if (Mode == enMode.AddNew)
             {
                 _FillApplicationData();
-                _FillLDLApplicationData();             
+                _FillLDLApplicationData();
             }
 
             if (Mode == enMode.Update)
+            {
                 _LDLApplication.LicenseClassID = clsLicenseClasses.GetLicensesClassesIDByClassName(cbLicenseClass.Text);
+                _Application.ApplicationDate = DateTime.Today;
+                _Application.LastStatusDate = DateTime.Today;
 
+            }
+           
             _LDLApplication.Save();
             lblAddEditLDLApplication.Text = "Update Local Driving License Application";
             lblDLApplicationID.Text = _LDLApplication.LDLApplicationID.ToString();
@@ -131,6 +162,11 @@ namespace Project_DVLD
         private void btnNext_Click(object sender, EventArgs e)
         {
             _IsValideAddEditNewLDLApplication();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _CloseForm();
         }
     }
 }

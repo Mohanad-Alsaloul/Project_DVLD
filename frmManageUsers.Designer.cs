@@ -34,21 +34,21 @@
             this.txtmuFilter = new System.Windows.Forms.TextBox();
             this.dgvManageUsers = new System.Windows.Forms.DataGridView();
             this.cmsListUser = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmShowDetalis = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmAddNewUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
             this.lblmuRecordNo = new System.Windows.Forms.Label();
             this.lblRecords = new System.Windows.Forms.Label();
             this.cbmuFilterIsActive = new System.Windows.Forms.ComboBox();
             this.cbmuFilterBy = new System.Windows.Forms.ComboBox();
             this.btnAddNewUser = new System.Windows.Forms.Button();
             this.btnmuClose = new System.Windows.Forms.Button();
+            this.tsmShowDetalis = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAddNewUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPhoneCall = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageUsers)).BeginInit();
             this.cmsListUser.SuspendLayout();
@@ -118,81 +118,20 @@
             this.cmsListUser.Name = "cmsListUser";
             this.cmsListUser.Size = new System.Drawing.Size(185, 282);
             // 
-            // tsmShowDetalis
-            // 
-            this.tsmShowDetalis.Image = global::Project_DVLD.Properties.Resources.PersonDetails_32;
-            this.tsmShowDetalis.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmShowDetalis.Name = "tsmShowDetalis";
-            this.tsmShowDetalis.Size = new System.Drawing.Size(184, 38);
-            this.tsmShowDetalis.Text = "Show Detalis";
-            this.tsmShowDetalis.Click += new System.EventHandler(this.tsmShowDetalis_Click);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(181, 6);
-            // 
-            // tsmAddNewUser
-            // 
-            this.tsmAddNewUser.Image = global::Project_DVLD.Properties.Resources.Add_New_User_32;
-            this.tsmAddNewUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmAddNewUser.Name = "tsmAddNewUser";
-            this.tsmAddNewUser.Size = new System.Drawing.Size(184, 38);
-            this.tsmAddNewUser.Text = "Add New User";
-            this.tsmAddNewUser.Click += new System.EventHandler(this.tsmAddNewUser_Click);
-            // 
-            // tsmEdit
-            // 
-            this.tsmEdit.Image = global::Project_DVLD.Properties.Resources.edit_32;
-            this.tsmEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(184, 38);
-            this.tsmEdit.Text = "Edit";
-            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
-            // 
-            // tsmDelete
-            // 
-            this.tsmDelete.Image = global::Project_DVLD.Properties.Resources.Delete_32;
-            this.tsmDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(184, 38);
-            this.tsmDelete.Text = "Delete";
-            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
-            // 
-            // tsmChangePassword
-            // 
-            this.tsmChangePassword.Image = global::Project_DVLD.Properties.Resources.Password_32;
-            this.tsmChangePassword.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmChangePassword.Name = "tsmChangePassword";
-            this.tsmChangePassword.Size = new System.Drawing.Size(184, 38);
-            this.tsmChangePassword.Text = "Change Password";
-            this.tsmChangePassword.Click += new System.EventHandler(this.tsmChangePassword_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(181, 6);
             // 
-            // tsmSendEmail
-            // 
-            this.tsmSendEmail.Image = global::Project_DVLD.Properties.Resources.send_email_32;
-            this.tsmSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmSendEmail.Name = "tsmSendEmail";
-            this.tsmSendEmail.Size = new System.Drawing.Size(184, 38);
-            this.tsmSendEmail.Text = "send Email";
-            // 
-            // tsmPhoneCall
-            // 
-            this.tsmPhoneCall.Image = global::Project_DVLD.Properties.Resources.call_32;
-            this.tsmPhoneCall.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsmPhoneCall.Name = "tsmPhoneCall";
-            this.tsmPhoneCall.Size = new System.Drawing.Size(184, 38);
-            this.tsmPhoneCall.Text = "Phone Call";
-            // 
             // lblmuRecordNo
             // 
             this.lblmuRecordNo.AutoSize = true;
-            this.lblmuRecordNo.Location = new System.Drawing.Point(104, 441);
+            this.lblmuRecordNo.Location = new System.Drawing.Point(104, 453);
             this.lblmuRecordNo.Name = "lblmuRecordNo";
             this.lblmuRecordNo.Size = new System.Drawing.Size(14, 15);
             this.lblmuRecordNo.TabIndex = 14;
@@ -203,7 +142,7 @@
             this.lblRecords.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRecords.AutoSize = true;
             this.lblRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecords.Location = new System.Drawing.Point(28, 441);
+            this.lblRecords.Location = new System.Drawing.Point(28, 453);
             this.lblRecords.Name = "lblRecords";
             this.lblRecords.Size = new System.Drawing.Size(70, 13);
             this.lblRecords.TabIndex = 13;
@@ -245,9 +184,9 @@
             // 
             this.btnAddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewUser.Image = global::Project_DVLD.Properties.Resources.Add_New_User_72;
-            this.btnAddNewUser.Location = new System.Drawing.Point(664, 146);
+            this.btnAddNewUser.Location = new System.Drawing.Point(662, 146);
             this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Size = new System.Drawing.Size(73, 68);
+            this.btnAddNewUser.Size = new System.Drawing.Size(75, 68);
             this.btnAddNewUser.TabIndex = 16;
             this.btnAddNewUser.UseVisualStyleBackColor = true;
             this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
@@ -265,6 +204,67 @@
             this.btnmuClose.Text = "Close";
             this.btnmuClose.UseVisualStyleBackColor = false;
             this.btnmuClose.Click += new System.EventHandler(this.btnmuClose_Click);
+            // 
+            // tsmShowDetalis
+            // 
+            this.tsmShowDetalis.Image = global::Project_DVLD.Properties.Resources.PersonDetails_32;
+            this.tsmShowDetalis.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmShowDetalis.Name = "tsmShowDetalis";
+            this.tsmShowDetalis.Size = new System.Drawing.Size(184, 38);
+            this.tsmShowDetalis.Text = "Show Detalis";
+            this.tsmShowDetalis.Click += new System.EventHandler(this.tsmShowDetalis_Click);
+            // 
+            // tsmAddNewUser
+            // 
+            this.tsmAddNewUser.Image = global::Project_DVLD.Properties.Resources.Add_New_User_32;
+            this.tsmAddNewUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmAddNewUser.Name = "tsmAddNewUser";
+            this.tsmAddNewUser.Size = new System.Drawing.Size(184, 38);
+            this.tsmAddNewUser.Text = "Add New User";
+            this.tsmAddNewUser.Click += new System.EventHandler(this.tsmAddNewUser_Click);
+            // 
+            // tsmEdit
+            // 
+            this.tsmEdit.Image = global::Project_DVLD.Properties.Resources.edit_32;
+            this.tsmEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmEdit.Name = "tsmEdit";
+            this.tsmEdit.Size = new System.Drawing.Size(184, 38);
+            this.tsmEdit.Text = "Edit";
+            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
+            // 
+            // tsmDelete
+            // 
+            this.tsmDelete.Image = global::Project_DVLD.Properties.Resources.Delete_32;
+            this.tsmDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmDelete.Name = "tsmDelete";
+            this.tsmDelete.Size = new System.Drawing.Size(184, 38);
+            this.tsmDelete.Text = "Delete";
+            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            // 
+            // tsmChangePassword
+            // 
+            this.tsmChangePassword.Image = global::Project_DVLD.Properties.Resources.Password_32;
+            this.tsmChangePassword.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmChangePassword.Name = "tsmChangePassword";
+            this.tsmChangePassword.Size = new System.Drawing.Size(184, 38);
+            this.tsmChangePassword.Text = "Change Password";
+            this.tsmChangePassword.Click += new System.EventHandler(this.tsmChangePassword_Click);
+            // 
+            // tsmSendEmail
+            // 
+            this.tsmSendEmail.Image = global::Project_DVLD.Properties.Resources.send_email_32;
+            this.tsmSendEmail.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmSendEmail.Name = "tsmSendEmail";
+            this.tsmSendEmail.Size = new System.Drawing.Size(184, 38);
+            this.tsmSendEmail.Text = "send Email";
+            // 
+            // tsmPhoneCall
+            // 
+            this.tsmPhoneCall.Image = global::Project_DVLD.Properties.Resources.call_32;
+            this.tsmPhoneCall.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmPhoneCall.Name = "tsmPhoneCall";
+            this.tsmPhoneCall.Size = new System.Drawing.Size(184, 38);
+            this.tsmPhoneCall.Text = "Phone Call";
             // 
             // pictureBox1
             // 
