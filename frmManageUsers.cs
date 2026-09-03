@@ -170,7 +170,7 @@ namespace Project_DVLD
 
         private void _ApplyFilter()
         {
-            if (!string.IsNullOrEmpty(txtmuFilter.Text) || cbmuFilterIsActive.Visible == true)
+            if (!string.IsNullOrEmpty(txtmuFilter.Text))
             {
                 switch (cbmuFilterBy.SelectedItem.ToString().ToLower())
                 {

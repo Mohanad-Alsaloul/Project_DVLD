@@ -12,7 +12,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Project_DVLD
 {
-    public partial class frmNewLocalDrivingLicenseApplication : Form
+    public partial class frmNewLDLApplication : Form
     {
         public enum enMode { AddNew = 0, Update = 1 }
 
@@ -22,7 +22,7 @@ namespace Project_DVLD
 
         private clsLDLApplications _LDLApplication;
         private clsApplications _Application;
-        public frmNewLocalDrivingLicenseApplication()
+        public frmNewLDLApplication()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Project_DVLD
 {
-    partial class frmNewLocalDrivingLicenseApplication
+    partial class frmNewLDLApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -324,7 +324,7 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // frmNewLocalDrivingLicenseApplication
+            // frmNewLDLApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -334,7 +334,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tcPesronInfo);
             this.Controls.Add(this.lblAddEditLDLApplication);
-            this.Name = "frmNewLocalDrivingLicenseApplication";
+            this.Name = "frmNewLDLApplication";
             this.ShowIcon = false;
             this.Text = "New Local Driving License Application";
             this.Load += new System.EventHandler(this.frmNewLocalDrivingLicenseApplication_Load);

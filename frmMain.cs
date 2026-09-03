@@ -70,7 +70,7 @@ namespace Project_DVLD
 
         private void tsmLocalLicense_Click(object sender, EventArgs e)
         {
-            frmNewLocalDrivingLicenseApplication frmnewlocaldriving = new frmNewLocalDrivingLicenseApplication();
+            frmNewLDLApplication frmnewlocaldriving = new frmNewLDLApplication();
             frmnewlocaldriving.ShowDialog();
         }
 
