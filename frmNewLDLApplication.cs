@@ -131,7 +131,7 @@ namespace Project_DVLD
                 return;
             }
 
-            if (clsLDLApplications.IsLDLApplicationExist(ctrFilterPersonalInfo1.NationalNo, cbLicenseClass.Text, "New"))
+            if (clsLDLApplications.IsLDLApplicationExist(ctrFilterPersonalInfo1.NationalNo, cbLicenseClass.Text))
             {
                 _MessageSelectAnotherLicenseClass();
                 return;
@@ -146,8 +146,6 @@ namespace Project_DVLD
             if (Mode == enMode.Update)
             {
                 _LDLApplication.LicenseClassID = clsLicenseClasses.GetLicensesClassesIDByClassName(cbLicenseClass.Text);
-                _Application.ApplicationDate = DateTime.Today;
-                _Application.LastStatusDate = DateTime.Today;
 
             }
            

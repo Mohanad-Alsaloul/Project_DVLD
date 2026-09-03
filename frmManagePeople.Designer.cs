@@ -150,26 +150,26 @@
             this.tsmSendEmail,
             this.tsmPhoneCall});
             this.cmsListPeople.Name = "cmsListPeople";
-            this.cmsListPeople.Size = new System.Drawing.Size(169, 208);
+            this.cmsListPeople.Size = new System.Drawing.Size(190, 230);
             // 
             // tsmShowDetails
             // 
             this.tsmShowDetails.Image = global::Project_DVLD.Properties.Resources.PersonDetails_32;
             this.tsmShowDetails.Name = "tsmShowDetails";
-            this.tsmShowDetails.Size = new System.Drawing.Size(168, 32);
+            this.tsmShowDetails.Size = new System.Drawing.Size(189, 32);
             this.tsmShowDetails.Text = "Show Details";
             this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(186, 6);
             // 
             // tsmAddNewPerson
             // 
             this.tsmAddNewPerson.Image = global::Project_DVLD.Properties.Resources.AddPerson_32;
             this.tsmAddNewPerson.Name = "tsmAddNewPerson";
-            this.tsmAddNewPerson.Size = new System.Drawing.Size(168, 32);
+            this.tsmAddNewPerson.Size = new System.Drawing.Size(189, 32);
             this.tsmAddNewPerson.Text = "Add New Person";
             this.tsmAddNewPerson.Click += new System.EventHandler(this.tsmAddNewPerson_Click);
             // 
@@ -177,7 +177,7 @@
             // 
             this.tsmEdit.Image = global::Project_DVLD.Properties.Resources.edit_32;
             this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(168, 32);
+            this.tsmEdit.Size = new System.Drawing.Size(189, 32);
             this.tsmEdit.Text = "Edit";
             this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
@@ -185,27 +185,27 @@
             // 
             this.tsmDelete.Image = global::Project_DVLD.Properties.Resources.Delete_32;
             this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(168, 32);
+            this.tsmDelete.Size = new System.Drawing.Size(189, 32);
             this.tsmDelete.Text = "Delete";
             this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(186, 6);
             // 
             // tsmSendEmail
             // 
             this.tsmSendEmail.Image = global::Project_DVLD.Properties.Resources.send_email_32;
             this.tsmSendEmail.Name = "tsmSendEmail";
-            this.tsmSendEmail.Size = new System.Drawing.Size(168, 32);
+            this.tsmSendEmail.Size = new System.Drawing.Size(189, 32);
             this.tsmSendEmail.Text = "Send Email";
             // 
             // tsmPhoneCall
             // 
             this.tsmPhoneCall.Image = global::Project_DVLD.Properties.Resources.call_32;
             this.tsmPhoneCall.Name = "tsmPhoneCall";
-            this.tsmPhoneCall.Size = new System.Drawing.Size(168, 32);
+            this.tsmPhoneCall.Size = new System.Drawing.Size(189, 32);
             this.tsmPhoneCall.Text = "Phone Call";
             // 
             // txtFilter
