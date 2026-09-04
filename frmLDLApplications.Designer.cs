@@ -42,9 +42,9 @@
             this.tsmCancelApplication = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmSechduleTests = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleWrittinTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleStreetTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmScheduleVisionTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmScheduleWrittinTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmScheduleStreetTest = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmIssuDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
@@ -188,36 +188,37 @@
             // tsmSechduleTests
             // 
             this.tsmSechduleTests.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scheduleToolStripMenuItem,
-            this.scheduleWrittinTestToolStripMenuItem,
-            this.scheduleStreetTestToolStripMenuItem});
+            this.tsmScheduleVisionTest,
+            this.tsmScheduleWrittinTest,
+            this.tsmScheduleStreetTest});
             this.tsmSechduleTests.Image = global::Project_DVLD.Properties.Resources.Schedule_Test_32;
             this.tsmSechduleTests.Name = "tsmSechduleTests";
             this.tsmSechduleTests.Size = new System.Drawing.Size(257, 32);
             this.tsmSechduleTests.Text = "Schedule Tests";
             // 
-            // scheduleToolStripMenuItem
+            // tsmScheduleVisionTest
             // 
-            this.scheduleToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Vision_Test_32;
-            this.scheduleToolStripMenuItem.Name = "scheduleToolStripMenuItem";
-            this.scheduleToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
-            this.scheduleToolStripMenuItem.Text = "Schedule Vision Test";
+            this.tsmScheduleVisionTest.Image = global::Project_DVLD.Properties.Resources.Vision_Test_32;
+            this.tsmScheduleVisionTest.Name = "tsmScheduleVisionTest";
+            this.tsmScheduleVisionTest.Size = new System.Drawing.Size(196, 32);
+            this.tsmScheduleVisionTest.Text = "Schedule Vision Test";
+            this.tsmScheduleVisionTest.Click += new System.EventHandler(this.tsmScheduleVisionTest_Click);
             // 
-            // scheduleWrittinTestToolStripMenuItem
+            // tsmScheduleWrittinTest
             // 
-            this.scheduleWrittinTestToolStripMenuItem.Enabled = false;
-            this.scheduleWrittinTestToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Written_Test_32;
-            this.scheduleWrittinTestToolStripMenuItem.Name = "scheduleWrittinTestToolStripMenuItem";
-            this.scheduleWrittinTestToolStripMenuItem.Size = new System.Drawing.Size(196, 32);
-            this.scheduleWrittinTestToolStripMenuItem.Text = "Schedule Written Test";
+            this.tsmScheduleWrittinTest.Enabled = false;
+            this.tsmScheduleWrittinTest.Image = global::Project_DVLD.Properties.Resources.Written_Test_32;
+            this.tsmScheduleWrittinTest.Name = "tsmScheduleWrittinTest";
+            this.tsmScheduleWrittinTest.Size = new System.Drawing.Size(196, 32);
+            this.tsmScheduleWrittinTest.Text = "Schedule Written Test";
             // 
-            // scheduleStreetTestToolStripMenuItem
+            // tsmScheduleStreetTest
             // 
-            this.scheduleStreetTestToolStripMenuItem.Enabled = false;
-            this.scheduleStreetTestToolStripMenuItem.Image = global::Project_DVLD.Properties.Resources.Street_Test_32;
-            this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
-            this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
-            this.scheduleStreetTestToolStripMenuItem.Text = "Schedule Street Test";
+            this.tsmScheduleStreetTest.Enabled = false;
+            this.tsmScheduleStreetTest.Image = global::Project_DVLD.Properties.Resources.Street_Test_32;
+            this.tsmScheduleStreetTest.Name = "tsmScheduleStreetTest";
+            this.tsmScheduleStreetTest.Size = new System.Drawing.Size(196, 32);
+            this.tsmScheduleStreetTest.Text = "Schedule Street Test";
             // 
             // toolStripMenuItem4
             // 
@@ -402,8 +403,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem tsmShowPersonLicsens;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem scheduleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scheduleWrittinTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmScheduleVisionTest;
+        private System.Windows.Forms.ToolStripMenuItem tsmScheduleWrittinTest;
+        private System.Windows.Forms.ToolStripMenuItem tsmScheduleStreetTest;
     }
 }

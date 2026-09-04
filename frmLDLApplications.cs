@@ -239,5 +239,12 @@ namespace Project_DVLD
           
             
         }
+
+        private void tsmScheduleVisionTest_Click(object sender, EventArgs e)
+        {
+            frmScheduleVisionTest frmscheduleVisionTest = new frmScheduleVisionTest(_GetLDLAplicationIDInDGV());
+            frmscheduleVisionTest.ShowDialog();
+            _RefreshLDLApplications();
+        }
     }
 }

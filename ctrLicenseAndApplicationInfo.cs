@@ -15,13 +15,12 @@ namespace Project_DVLD
     {
         private clsLDLApplications _LDLApplication;
 
-        public int LDLApplicationID { set; get; };
+        public static int LDLApplicationID { set; get; }
 
-        public ctrLicenseAndApplicationInfo(int LDLApplicationID)
+        public ctrLicenseAndApplicationInfo()
         {
             InitializeComponent();
 
-            this.LDLApplicationID = LDLApplicationID;
         }
 
         private bool _IsLDLApplicationExit()
@@ -37,7 +36,7 @@ namespace Project_DVLD
                 return;
             }
 
-            lblApplicationID.Text = LDLApplicationID.ToString();
+            lblLDLApplicationID.Text = LDLApplicationID.ToString();
             lblAppliedForLicense.Text = _LDLApplication.ClassName;
             lblPassedTests.Text = $"{_LDLApplication.PassedTest}/3";
         }
@@ -54,7 +53,7 @@ namespace Project_DVLD
 
         private void ctrLicenseAndApplicationInfo_Load(object sender, EventArgs e)
         {
-            _LoadDrivingLicenseApplicationData();
+           _LoadDrivingLicenseApplicationData();
         }
     }
 }

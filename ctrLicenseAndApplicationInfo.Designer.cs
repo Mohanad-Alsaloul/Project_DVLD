@@ -37,7 +37,7 @@
             this.lblAppliedForLicense = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblDLApplicationID = new System.Windows.Forms.Label();
+            this.lblLDLApplicationID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -66,12 +66,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
-            this.dgvAppointments = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnmuClose = new System.Windows.Forms.Button();
-            this.lblmuRecordNo = new System.Windows.Forms.Label();
-            this.lblRecords = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -86,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -99,10 +92,10 @@
             this.groupBox1.Controls.Add(this.lblAppliedForLicense);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblDLApplicationID);
+            this.groupBox1.Controls.Add(this.lblLDLApplicationID);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(726, 112);
             this.groupBox1.TabIndex = 0;
@@ -189,15 +182,15 @@
             this.label1.TabIndex = 60;
             this.label1.Text = "Applied For License:";
             // 
-            // lblDLApplicationID
+            // lblLDLApplicationID
             // 
-            this.lblDLApplicationID.AutoSize = true;
-            this.lblDLApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDLApplicationID.Location = new System.Drawing.Point(120, 31);
-            this.lblDLApplicationID.Name = "lblDLApplicationID";
-            this.lblDLApplicationID.Size = new System.Drawing.Size(47, 15);
-            this.lblDLApplicationID.TabIndex = 59;
-            this.lblDLApplicationID.Text = "[????]";
+            this.lblLDLApplicationID.AutoSize = true;
+            this.lblLDLApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLApplicationID.Location = new System.Drawing.Point(120, 31);
+            this.lblLDLApplicationID.Name = "lblLDLApplicationID";
+            this.lblLDLApplicationID.Size = new System.Drawing.Size(47, 15);
+            this.lblLDLApplicationID.TabIndex = 59;
+            this.lblLDLApplicationID.Text = "[????]";
             // 
             // pictureBox1
             // 
@@ -246,7 +239,7 @@
             this.groupBox2.Controls.Add(this.pictureBox6);
             this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 121);
+            this.groupBox2.Location = new System.Drawing.Point(3, 121);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(726, 191);
             this.groupBox2.TabIndex = 1;
@@ -508,91 +501,15 @@
             this.label5.TabIndex = 58;
             this.label5.Text = "ID:";
             // 
-            // btnAddAppointment
-            // 
-            this.btnAddAppointment.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddAppointment.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Image = global::Project_DVLD.Properties.Resources.AddAppointment_32;
-            this.btnAddAppointment.Location = new System.Drawing.Point(697, 318);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(39, 35);
-            this.btnAddAppointment.TabIndex = 5;
-            this.btnAddAppointment.UseVisualStyleBackColor = false;
-            // 
-            // dgvAppointments
-            // 
-            this.dgvAppointments.AllowUserToAddRows = false;
-            this.dgvAppointments.AllowUserToDeleteRows = false;
-            this.dgvAppointments.AllowUserToOrderColumns = true;
-            this.dgvAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvAppointments.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Location = new System.Drawing.Point(12, 359);
-            this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.ReadOnly = true;
-            this.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointments.Size = new System.Drawing.Size(724, 156);
-            this.dgvAppointments.TabIndex = 13;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 327);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 15);
-            this.label12.TabIndex = 64;
-            this.label12.Text = "Appointments:";
-            // 
-            // btnmuClose
-            // 
-            this.btnmuClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnmuClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmuClose.Image = global::Project_DVLD.Properties.Resources.Close_32;
-            this.btnmuClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmuClose.Location = new System.Drawing.Point(627, 521);
-            this.btnmuClose.Name = "btnmuClose";
-            this.btnmuClose.Size = new System.Drawing.Size(109, 29);
-            this.btnmuClose.TabIndex = 67;
-            this.btnmuClose.Text = "Close";
-            this.btnmuClose.UseVisualStyleBackColor = false;
-            // 
-            // lblmuRecordNo
-            // 
-            this.lblmuRecordNo.AutoSize = true;
-            this.lblmuRecordNo.Location = new System.Drawing.Point(84, 529);
-            this.lblmuRecordNo.Name = "lblmuRecordNo";
-            this.lblmuRecordNo.Size = new System.Drawing.Size(13, 13);
-            this.lblmuRecordNo.TabIndex = 66;
-            this.lblmuRecordNo.Text = "3";
-            // 
-            // lblRecords
-            // 
-            this.lblRecords.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblRecords.AutoSize = true;
-            this.lblRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecords.Location = new System.Drawing.Point(9, 529);
-            this.lblRecords.Name = "lblRecords";
-            this.lblRecords.Size = new System.Drawing.Size(70, 13);
-            this.lblRecords.TabIndex = 65;
-            this.lblRecords.Text = "# Records:";
-            // 
             // ctrLicenseAndApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnmuClose);
-            this.Controls.Add(this.lblmuRecordNo);
-            this.Controls.Add(this.lblRecords);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.dgvAppointments);
-            this.Controls.Add(this.btnAddAppointment);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrLicenseAndApplicationInfo";
-            this.Size = new System.Drawing.Size(749, 556);
+            this.Size = new System.Drawing.Size(732, 314);
             this.Load += new System.EventHandler(this.ctrLicenseAndApplicationInfo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -610,9 +527,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -621,7 +536,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblDLApplicationID;
+        private System.Windows.Forms.Label lblLDLApplicationID;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblAppliedForLicense;
@@ -656,11 +571,5 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.LinkLabel llViewPersonInfo;
-        private System.Windows.Forms.Button btnAddAppointment;
-        private System.Windows.Forms.DataGridView dgvAppointments;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnmuClose;
-        private System.Windows.Forms.Label lblmuRecordNo;
-        private System.Windows.Forms.Label lblRecords;
     }
 }

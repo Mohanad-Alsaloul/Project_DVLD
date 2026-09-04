@@ -16,5 +16,11 @@ namespace Project_DVLD
         {
             InitializeComponent();
         }
+
+        public frmScheduleVisionTest(int LDLApplicationID)
+        {
+            InitializeComponent();
+            ctrLicenseAndApplicationInfo.LDLApplicationID = LDLApplicationID;
+        }
     }
 }
