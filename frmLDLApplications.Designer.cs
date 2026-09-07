@@ -139,7 +139,7 @@
             this.toolStripMenuItem6,
             this.tsmShowPersonLicsens});
             this.msLDLApplication.Name = "contextMenuStrip1";
-            this.msLDLApplication.Size = new System.Drawing.Size(258, 318);
+            this.msLDLApplication.Size = new System.Drawing.Size(258, 296);
             // 
             // tsmShowApplication
             // 
@@ -200,7 +200,7 @@
             // 
             this.tsmScheduleVisionTest.Image = global::Project_DVLD.Properties.Resources.Vision_Test_32;
             this.tsmScheduleVisionTest.Name = "tsmScheduleVisionTest";
-            this.tsmScheduleVisionTest.Size = new System.Drawing.Size(196, 32);
+            this.tsmScheduleVisionTest.Size = new System.Drawing.Size(187, 22);
             this.tsmScheduleVisionTest.Text = "Schedule Vision Test";
             this.tsmScheduleVisionTest.Click += new System.EventHandler(this.tsmScheduleVisionTest_Click);
             // 
@@ -209,7 +209,7 @@
             this.tsmScheduleWrittinTest.Enabled = false;
             this.tsmScheduleWrittinTest.Image = global::Project_DVLD.Properties.Resources.Written_Test_32;
             this.tsmScheduleWrittinTest.Name = "tsmScheduleWrittinTest";
-            this.tsmScheduleWrittinTest.Size = new System.Drawing.Size(196, 32);
+            this.tsmScheduleWrittinTest.Size = new System.Drawing.Size(187, 22);
             this.tsmScheduleWrittinTest.Text = "Schedule Written Test";
             // 
             // tsmScheduleStreetTest
@@ -217,7 +217,7 @@
             this.tsmScheduleStreetTest.Enabled = false;
             this.tsmScheduleStreetTest.Image = global::Project_DVLD.Properties.Resources.Street_Test_32;
             this.tsmScheduleStreetTest.Name = "tsmScheduleStreetTest";
-            this.tsmScheduleStreetTest.Size = new System.Drawing.Size(196, 32);
+            this.tsmScheduleStreetTest.Size = new System.Drawing.Size(187, 22);
             this.tsmScheduleStreetTest.Text = "Schedule Street Test";
             // 
             // toolStripMenuItem4
@@ -314,6 +314,7 @@
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnAddNewLDLApplication
             // 

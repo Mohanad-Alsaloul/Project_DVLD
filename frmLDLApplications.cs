@@ -246,5 +246,15 @@ namespace Project_DVLD
             frmscheduleVisionTest.ShowDialog();
             _RefreshLDLApplications();
         }
+
+
+        private void _CloseForm()
+        {
+            this.FindForm().Close();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            _CloseForm();
+        }
     }
 }

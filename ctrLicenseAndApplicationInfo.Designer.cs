@@ -256,6 +256,7 @@
             this.llViewPersonInfo.TabIndex = 69;
             this.llViewPersonInfo.TabStop = true;
             this.llViewPersonInfo.Text = "View Person Info";
+            this.llViewPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llViewPersonInfo_LinkClicked);
             // 
             // lblCreatedBy
             // 
@@ -263,9 +264,9 @@
             this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreatedBy.Location = new System.Drawing.Point(571, 92);
             this.lblCreatedBy.Name = "lblCreatedBy";
-            this.lblCreatedBy.Size = new System.Drawing.Size(67, 15);
+            this.lblCreatedBy.Size = new System.Drawing.Size(31, 15);
             this.lblCreatedBy.TabIndex = 68;
-            this.lblCreatedBy.Text = "Mohanad";
+            this.lblCreatedBy.Text = "???";
             // 
             // lblStatusDate
             // 
@@ -273,9 +274,9 @@
             this.lblStatusDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatusDate.Location = new System.Drawing.Point(571, 61);
             this.lblStatusDate.Name = "lblStatusDate";
-            this.lblStatusDate.Size = new System.Drawing.Size(79, 15);
+            this.lblStatusDate.Size = new System.Drawing.Size(31, 15);
             this.lblStatusDate.TabIndex = 68;
-            this.lblStatusDate.Text = "03/09/2026";
+            this.lblStatusDate.Text = "???";
             // 
             // lblDate
             // 
@@ -283,9 +284,9 @@
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(571, 34);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(79, 15);
+            this.lblDate.Size = new System.Drawing.Size(31, 15);
             this.lblDate.TabIndex = 68;
-            this.lblDate.Text = "03/09/2026";
+            this.lblDate.Text = "???";
             // 
             // pictureBox12
             // 
@@ -353,9 +354,9 @@
             this.lblApplicant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApplicant.Location = new System.Drawing.Point(120, 146);
             this.lblApplicant.Name = "lblApplicant";
-            this.lblApplicant.Size = new System.Drawing.Size(198, 15);
+            this.lblApplicant.Size = new System.Drawing.Size(31, 15);
             this.lblApplicant.TabIndex = 65;
-            this.lblApplicant.Text = "Mohammad Ali Omer Almajed";
+            this.lblApplicant.Text = "???";
             // 
             // lblType
             // 
@@ -363,9 +364,9 @@
             this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.Location = new System.Drawing.Point(120, 116);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(232, 15);
+            this.lblType.Size = new System.Drawing.Size(31, 15);
             this.lblType.TabIndex = 65;
-            this.lblType.Text = "New Local Driving License Service ";
+            this.lblType.Text = "???";
             // 
             // lblFees
             // 
@@ -413,9 +414,9 @@
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(120, 61);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(35, 15);
+            this.lblStatus.Size = new System.Drawing.Size(31, 15);
             this.lblStatus.TabIndex = 62;
-            this.lblStatus.Text = "New";
+            this.lblStatus.Text = "???";
             // 
             // label6
             // 

@@ -62,3 +62,4 @@ D:\CoursC#\Project_DVLD\bin\Debug\Project_DVLD.exe.config
 D:\CoursC#\Project_DVLD\bin\Debug\Project_DVLD.pdb
 D:\CoursC#\Project_DVLD\obj\Debug\Project_.C749FC80.Up2Date
 D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.exe.config
+D:\CoursC#\Project_DVLD\obj\Debug\Project_DVLD.frmScheduleTest.resources
