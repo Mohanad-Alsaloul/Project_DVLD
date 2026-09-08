@@ -55,7 +55,7 @@ namespace Project_DVLD
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
             _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
-            _TestAppointments = clsTestAppointments.FindTestAppointmentInfoByID(
+            _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytLDLAppID(
                 ctrLicenseAndApplicationInfo.LDLApplicationID, _TestTypes.TestTypeTitle);
 
             if (_TestAppointments != null && _TestAppointments.IsLocked == 0)
@@ -74,7 +74,7 @@ namespace Project_DVLD
         private void frmScheduleVisionTest_Load(object sender, EventArgs e)
         {
             _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
-            _TestAppointments = clsTestAppointments.FindTestAppointmentInfoByID(
+            _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytLDLAppID(
                 ctrLicenseAndApplicationInfo.LDLApplicationID, _TestTypes.TestTypeTitle);
             _RefreshTestAppointment();
         }
@@ -90,9 +90,18 @@ namespace Project_DVLD
             _CloseForm();
         }
 
+        private int _GetAppointmentIDInDGV()
+        {
+            return (int)dgvAppointments.CurrentRow.Cells[0].Value;
+        }
+
         private void tsmEdit_Click(object sender, EventArgs e)
         {
+            frmScheduleTest frmscheduletest = new frmScheduleTest(_GetAppointmentIDInDGV());
 
+            frmscheduletest.ShowDialog();
+
+            _RefreshTestAppointment();
         }
     }
 }

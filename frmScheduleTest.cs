@@ -25,9 +25,19 @@ namespace Project_DVLD
 
         private clsTestAppointments _TestAppointments;
 
+        private int _TestAppointmentID;
+
         public frmScheduleTest()
         {
             InitializeComponent();
+        }
+
+        public frmScheduleTest(int TestAppointmentID)
+        {
+            InitializeComponent();
+
+            this._TestAppointmentID = TestAppointmentID;
+            Mode = enMode.Update;
         }
 
         public frmScheduleTest(clsLDLApplications LDLApplication,  clsApplications Application)
@@ -36,6 +46,8 @@ namespace Project_DVLD
 
             this._LDLApplication = LDLApplication;
             this._Application = Application;
+
+            Mode = enMode.AddNew;
         }
 
         private void _MessageNotFoundTestType()
@@ -46,23 +58,51 @@ namespace Project_DVLD
 
         private void _InitializVisionTestData()
         {
-            lblLDLApplicationID.Text = _LDLApplication.LDLApplicationID.ToString();
-            lblDClass.Text = _LDLApplication.ClassName;
-            lblName.Text = _LDLApplication.ApplicantFullName;
-            _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
-
-            if (_TestTypes == null)
+            if (Mode == enMode.AddNew)
             {
-                _MessageNotFoundTestType();
-                return;
-            }
+                lblLDLApplicationID.Text = _LDLApplication.LDLApplicationID.ToString();
+                lblDClass.Text = _LDLApplication.ClassName;
+                lblName.Text = _LDLApplication.ApplicantFullName;
+                _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
 
-            lblFees.Text = _TestTypes.TestTypeFees.ToString();
+                if (_TestTypes == null)
+                {
+                    _MessageNotFoundTestType();
+                    return;
+                }
+
+                lblFees.Text = _TestTypes.TestTypeFees.ToString();
+            }
+                
+        }
+
+        private void _InitializUpdateVisionTestData()
+        {
+            if(Mode == enMode.Update)
+            {
+                _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
+                _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytTestAppID(this._TestAppointmentID,
+                    _TestTypes.TestTypeTitle);
+
+                lblLDLApplicationID.Text = _TestAppointments.LDLAppID.ToString();
+                lblDClass.Text = _TestAppointments.ClassName;
+                lblName.Text = _TestAppointments.FullName;
+                dtbDate.Value = _TestAppointments.AppointmentDate;
+
+                if (_TestTypes == null)
+                {
+                    _MessageNotFoundTestType();
+                    return;
+                }
+                lblFees.Text = _TestAppointments.PaidFees.ToString();
+            }           
         }
 
         private void frmScheduleTest_Load(object sender, EventArgs e)
         {
             _InitializVisionTestData();
+
+            _InitializUpdateVisionTestData();
         }
 
         private void _FillTestAppointmentDate()
@@ -88,7 +128,7 @@ namespace Project_DVLD
         private void btnSave_Click(object sender, EventArgs e)
         {
             _FillTestAppointmentDate();
-            _TestAppointments.AddTestAppointment();
+            _TestAppointments.Save();        
             _MessageSuccssefulToAddTestAppointment();
             this.Close();
         }
