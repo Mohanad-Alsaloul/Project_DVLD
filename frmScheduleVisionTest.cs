@@ -103,5 +103,12 @@ namespace Project_DVLD
 
             _RefreshTestAppointment();
         }
+
+        private void tsmTakeTest_Click(object sender, EventArgs e)
+        {
+            frmTakeTest frmtaketest = new frmTakeTest(_GetAppointmentIDInDGV());
+            frmtaketest.ShowDialog();
+            _RefreshTestAppointment();
+        }
     }
 }

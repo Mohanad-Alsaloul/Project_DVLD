@@ -34,13 +34,13 @@
             this.lblRecords = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dgvAppointments = new System.Windows.Forms.DataGridView();
-            this.ctrLicenseAndApplicationInfo1 = new Project_DVLD.ctrLicenseAndApplicationInfo();
             this.msAppointment = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmTakeTest = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddAppointment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ctrLicenseAndApplicationInfo1 = new Project_DVLD.ctrLicenseAndApplicationInfo();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.msAppointment.SuspendLayout();
             this.SuspendLayout();
@@ -103,16 +103,6 @@
             this.dgvAppointments.Size = new System.Drawing.Size(732, 137);
             this.dgvAppointments.TabIndex = 69;
             // 
-            // ctrLicenseAndApplicationInfo1
-            // 
-            this.ctrLicenseAndApplicationInfo1._Application = null;
-            this.ctrLicenseAndApplicationInfo1._LDLApplication = null;
-            this.ctrLicenseAndApplicationInfo1.BackColor = System.Drawing.Color.White;
-            this.ctrLicenseAndApplicationInfo1.Location = new System.Drawing.Point(12, 113);
-            this.ctrLicenseAndApplicationInfo1.Name = "ctrLicenseAndApplicationInfo1";
-            this.ctrLicenseAndApplicationInfo1.Size = new System.Drawing.Size(732, 314);
-            this.ctrLicenseAndApplicationInfo1.TabIndex = 74;
-            // 
             // msAppointment
             // 
             this.msAppointment.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -120,7 +110,7 @@
             this.tsmEdit,
             this.tsmTakeTest});
             this.msAppointment.Name = "msAppointment";
-            this.msAppointment.Size = new System.Drawing.Size(125, 56);
+            this.msAppointment.Size = new System.Drawing.Size(185, 78);
             // 
             // btnClose
             // 
@@ -140,7 +130,7 @@
             // 
             this.tsmEdit.Image = global::Project_DVLD.Properties.Resources.edit_32;
             this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(124, 26);
+            this.tsmEdit.Size = new System.Drawing.Size(184, 26);
             this.tsmEdit.Text = "Edit";
             this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
@@ -148,8 +138,9 @@
             // 
             this.tsmTakeTest.Image = global::Project_DVLD.Properties.Resources.Test_32;
             this.tsmTakeTest.Name = "tsmTakeTest";
-            this.tsmTakeTest.Size = new System.Drawing.Size(124, 26);
+            this.tsmTakeTest.Size = new System.Drawing.Size(184, 26);
             this.tsmTakeTest.Text = "Take Test";
+            this.tsmTakeTest.Click += new System.EventHandler(this.tsmTakeTest_Click);
             // 
             // btnAddAppointment
             // 
@@ -172,6 +163,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(134, 70);
             this.panel1.TabIndex = 1;
+            // 
+            // ctrLicenseAndApplicationInfo1
+            // 
+            this.ctrLicenseAndApplicationInfo1._Application = null;
+            this.ctrLicenseAndApplicationInfo1._LDLApplication = null;
+            this.ctrLicenseAndApplicationInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrLicenseAndApplicationInfo1.Location = new System.Drawing.Point(12, 113);
+            this.ctrLicenseAndApplicationInfo1.Name = "ctrLicenseAndApplicationInfo1";
+            this.ctrLicenseAndApplicationInfo1.Size = new System.Drawing.Size(732, 314);
+            this.ctrLicenseAndApplicationInfo1.TabIndex = 74;
             // 
             // frmScheduleVisionTest
             // 
