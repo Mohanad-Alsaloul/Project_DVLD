@@ -14,7 +14,7 @@ namespace Project_DVLD
     {
         private clsTestAppointments _TestAppointments;
         private clsTestTypes _TestTypes;
-
+        private clsTests _Tests;
         public frmScheduleVisionTest()
         {
             InitializeComponent();
@@ -50,13 +50,18 @@ namespace Project_DVLD
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-
+        private void _MessagePersonPassedTest()
+        {
+            MessageBox.Show("This Person already passed this test before, you can only retake faild test",
+                "Not allowed",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
             _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
             _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytLDLAppID(
-                ctrLicenseAndApplicationInfo.LDLApplicationID, _TestTypes.TestTypeTitle);
+                ctrLicenseAndApplicationInfo.LDLApplicationID, _TestTypes.TestTypeTitle);                  
 
             if (_TestAppointments != null && _TestAppointments.IsLocked == 0)
             {
@@ -64,6 +69,12 @@ namespace Project_DVLD
                 return;
             }
 
+            if (clsLDLApplications.IsLDLAppPassedVisionTset(ctrLicenseAndApplicationInfo.LDLApplicationID))
+            {
+                    _MessagePersonPassedTest();
+                return;
+            }
+         
             frmScheduleTest frmscheduletest = new frmScheduleTest(ctrLicenseAndApplicationInfo1._LDLApplication,
                 ctrLicenseAndApplicationInfo1._Application);
             frmscheduletest.ShowDialog();

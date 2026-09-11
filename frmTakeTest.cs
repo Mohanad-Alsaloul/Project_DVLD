@@ -38,10 +38,10 @@ namespace Project_DVLD
 
         private void _InitializUpdateVisionTestData()
         {
-                _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
-                _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytTestAppID(this._TestAppointmentID,
+           _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
+           _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytTestAppID(this._TestAppointmentID,
                     _TestTypes.TestTypeTitle);
-                  _Test = clsTests.Find(this._TestAppointmentID);
+                  
 
                 if (_TestAppointments == null)
                 {
@@ -60,7 +60,13 @@ namespace Project_DVLD
                 lblName.Text = _TestAppointments.FullName;
                 lblDate.Text = _TestAppointments.AppointmentDate.ToString("dd/MMM/yyyy");
                 lblFees.Text = _TestAppointments.PaidFees.ToString();
-            lblTestID.Text = _Test.TestID.ToString();
+            lblTrial.Text = clsTestAppointments.CountTrialTests(_TestAppointments.LDLAppID,
+                   _TestTypes.TestTypeTitle, 1).ToString();
+
+            _Test = clsTests.Find(this._TestAppointmentID);
+
+            if (_Test != null)
+                lblTestID.Text = _Test.TestID.ToString();
 
             if (_TestAppointments.IsLocked == 1)
             {
