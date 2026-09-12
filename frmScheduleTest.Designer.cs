@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAppLocked = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.grbRetkaeTestInfo = new System.Windows.Forms.GroupBox();
+            this.grbRetakeTestInfo = new System.Windows.Forms.GroupBox();
             this.lblRTestAppID = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,9 +62,8 @@
             this.lblScheduleTest = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lblAppLocked = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.grbRetkaeTestInfo.SuspendLayout();
+            this.grbRetakeTestInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -79,7 +79,7 @@
             // 
             this.groupBox1.Controls.Add(this.lblAppLocked);
             this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.grbRetkaeTestInfo);
+            this.groupBox1.Controls.Add(this.grbRetakeTestInfo);
             this.groupBox1.Controls.Add(this.pictureBox7);
             this.groupBox1.Controls.Add(this.dtbDate);
             this.groupBox1.Controls.Add(this.pictureBox10);
@@ -107,6 +107,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vision Test";
             // 
+            // lblAppLocked
+            // 
+            this.lblAppLocked.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAppLocked.AutoSize = true;
+            this.lblAppLocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppLocked.ForeColor = System.Drawing.Color.Crimson;
+            this.lblAppLocked.Location = new System.Drawing.Point(14, 131);
+            this.lblAppLocked.Name = "lblAppLocked";
+            this.lblAppLocked.Size = new System.Drawing.Size(358, 16);
+            this.lblAppLocked.TabIndex = 76;
+            this.lblAppLocked.Text = "Person already sat for the test, appoinment locked.";
+            this.lblAppLocked.Visible = false;
+            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -121,24 +134,24 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // grbRetkaeTestInfo
+            // grbRetakeTestInfo
             // 
-            this.grbRetkaeTestInfo.Controls.Add(this.lblRTestAppID);
-            this.grbRetkaeTestInfo.Controls.Add(this.pictureBox6);
-            this.grbRetkaeTestInfo.Controls.Add(this.label11);
-            this.grbRetkaeTestInfo.Controls.Add(this.lblTotalFees);
-            this.grbRetkaeTestInfo.Controls.Add(this.lblRAppFees);
-            this.grbRetkaeTestInfo.Controls.Add(this.pictureBox5);
-            this.grbRetkaeTestInfo.Controls.Add(this.label7);
-            this.grbRetkaeTestInfo.Controls.Add(this.pictureBox4);
-            this.grbRetkaeTestInfo.Controls.Add(this.label5);
-            this.grbRetkaeTestInfo.Enabled = false;
-            this.grbRetkaeTestInfo.Location = new System.Drawing.Point(7, 333);
-            this.grbRetkaeTestInfo.Name = "grbRetkaeTestInfo";
-            this.grbRetkaeTestInfo.Size = new System.Drawing.Size(384, 99);
-            this.grbRetkaeTestInfo.TabIndex = 73;
-            this.grbRetkaeTestInfo.TabStop = false;
-            this.grbRetkaeTestInfo.Text = "Retkae Test Info";
+            this.grbRetakeTestInfo.Controls.Add(this.lblRTestAppID);
+            this.grbRetakeTestInfo.Controls.Add(this.pictureBox6);
+            this.grbRetakeTestInfo.Controls.Add(this.label11);
+            this.grbRetakeTestInfo.Controls.Add(this.lblTotalFees);
+            this.grbRetakeTestInfo.Controls.Add(this.lblRAppFees);
+            this.grbRetakeTestInfo.Controls.Add(this.pictureBox5);
+            this.grbRetakeTestInfo.Controls.Add(this.label7);
+            this.grbRetakeTestInfo.Controls.Add(this.pictureBox4);
+            this.grbRetakeTestInfo.Controls.Add(this.label5);
+            this.grbRetakeTestInfo.Enabled = false;
+            this.grbRetakeTestInfo.Location = new System.Drawing.Point(7, 333);
+            this.grbRetakeTestInfo.Name = "grbRetakeTestInfo";
+            this.grbRetakeTestInfo.Size = new System.Drawing.Size(384, 99);
+            this.grbRetakeTestInfo.TabIndex = 73;
+            this.grbRetakeTestInfo.TabStop = false;
+            this.grbRetakeTestInfo.Text = "Retake Test Info";
             // 
             // lblRTestAppID
             // 
@@ -186,9 +199,9 @@
             this.lblRAppFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRAppFees.Location = new System.Drawing.Point(137, 27);
             this.lblRAppFees.Name = "lblRAppFees";
-            this.lblRAppFees.Size = new System.Drawing.Size(31, 15);
+            this.lblRAppFees.Size = new System.Drawing.Size(15, 15);
             this.lblRAppFees.TabIndex = 75;
-            this.lblRAppFees.Text = "???";
+            this.lblRAppFees.Text = "5";
             // 
             // pictureBox5
             // 
@@ -443,19 +456,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lblAppLocked
-            // 
-            this.lblAppLocked.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAppLocked.AutoSize = true;
-            this.lblAppLocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppLocked.ForeColor = System.Drawing.Color.Crimson;
-            this.lblAppLocked.Location = new System.Drawing.Point(14, 131);
-            this.lblAppLocked.Name = "lblAppLocked";
-            this.lblAppLocked.Size = new System.Drawing.Size(358, 16);
-            this.lblAppLocked.TabIndex = 76;
-            this.lblAppLocked.Text = "Person already sat for the test, appoinment locked.";
-            this.lblAppLocked.Visible = false;
-            // 
             // frmScheduleTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,8 +470,8 @@
             this.Load += new System.EventHandler(this.frmScheduleTest_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.grbRetkaeTestInfo.ResumeLayout(false);
-            this.grbRetkaeTestInfo.PerformLayout();
+            this.grbRetakeTestInfo.ResumeLayout(false);
+            this.grbRetakeTestInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -508,7 +508,7 @@
         private System.Windows.Forms.Label lblFees;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.GroupBox grbRetkaeTestInfo;
+        private System.Windows.Forms.GroupBox grbRetakeTestInfo;
         private System.Windows.Forms.Label lblTotalFees;
         private System.Windows.Forms.Label lblRAppFees;
         private System.Windows.Forms.PictureBox pictureBox5;

@@ -23,7 +23,9 @@ namespace Project_DVLD
 
         private clsTestTypes _TestTypes;
 
-        private clsTestAppointments _TestAppointments;
+        private clsTestAppointments _TestAppointment;
+
+        private clsRetakeTests _RetakeTest;
 
         private int _TestAppointmentID;
 
@@ -60,7 +62,8 @@ namespace Project_DVLD
         {
             if (Mode == enMode.AddNew)
             {
-                _TestAppointments = new clsTestAppointments();
+                _TestAppointment = new clsTestAppointments();
+                _RetakeTest = new clsRetakeTests();
 
                 lblLDLApplicationID.Text = _LDLApplication.LDLApplicationID.ToString();
                 lblDClass.Text = _LDLApplication.ClassName;
@@ -76,8 +79,15 @@ namespace Project_DVLD
                 }
 
                 lblFees.Text = _TestTypes.TestTypeFees.ToString();
-            }
-                
+
+                if (Convert.ToInt16(lblTrial.Text) != 0)
+                {
+                    grbRetakeTestInfo.Enabled = true;
+                    lblRAppFees.Text = "5";
+                    lblTotalFees.Text = (Convert.ToInt16(lblRAppFees.Text) + 
+                                             Convert.ToInt16(lblFees.Text)).ToString();       
+                }
+            }               
         }
 
         private void _InitializUpdateVisionTestData()
@@ -85,11 +95,13 @@ namespace Project_DVLD
             if(Mode == enMode.Update)
             {
                 _TestTypes = clsTestTypes.FindTestTypeInfoByID(1);
-                _TestAppointments = clsTestAppointments.FindTestAppointmentInfoBytTestAppID(this._TestAppointmentID,
+                _TestAppointment = clsTestAppointments.FindTestAppointmentInfoBytTestAppID(this._TestAppointmentID,
                     _TestTypes.TestTypeTitle);
-                lblTrial.Text = clsTestAppointments.CountTrialTests(_TestAppointments.LDLAppID,
+                
+                lblTrial.Text = clsTestAppointments.CountTrialTests(_TestAppointment.LDLAppID,
                    _TestTypes.TestTypeTitle, 1).ToString();
-                if (_TestAppointments == null)
+
+                if (_TestAppointment == null)
                 {
                     MessageBox.Show("Not Found Test Appointments", "",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,18 +113,25 @@ namespace Project_DVLD
                     return;
                 }
 
-                lblLDLApplicationID.Text = _TestAppointments.LDLAppID.ToString();
-                lblDClass.Text = _TestAppointments.ClassName;
-                lblName.Text = _TestAppointments.FullName;
-                dtbDate.Value = _TestAppointments.AppointmentDate;                  
-                lblFees.Text = _TestAppointments.PaidFees.ToString();
+                lblLDLApplicationID.Text = _TestAppointment.LDLAppID.ToString();
+                lblDClass.Text = _TestAppointment.ClassName;
+                lblName.Text = _TestAppointment.FullName;
+                dtbDate.Value = _TestAppointment.AppointmentDate;                  
+                lblFees.Text = _TestAppointment.PaidFees.ToString();
 
-                if(_TestAppointments.IsLocked == 1)
+
+                if (Convert.ToInt16(lblTrial.Text) != 0)
+                {
+                    _RetakeTest.TestAppointmentID = _TestAppointment.TestAppointmentID;
+                    _RetakeTest.PaidFees = 5;
+                }
+
+                if (_TestAppointment.IsLocked == 1)
                 {
                     lblScheduleTest.Text = "Schedule Retake Test";
                     lblAppLocked.Visible = true;
                     dtbDate.Enabled = false;
-                    grbRetkaeTestInfo.Enabled = true;
+                    grbRetakeTestInfo.Enabled = true;
                     btnSave.Enabled = false;
                 }
             }           
@@ -130,13 +149,13 @@ namespace Project_DVLD
         private void _FillTestAppointmentDate()
         {
    
-                _TestAppointments.TestTypeID = 1;
-                _TestAppointments.LDLAppID = Convert.ToInt16(lblLDLApplicationID.Text);
-                _TestAppointments.AppointmentDate = dtbDate.Value;
-                _TestAppointments.PaidFees = clsTestTypes.FindTestTypeInfoByID(1).TestTypeFees;
-                _TestAppointments.CreatedByUser = clsUserLoginInfo.UserID;
-                _TestAppointments.IsLocked = 0;
-           
+                _TestAppointment.TestTypeID = 1;
+                _TestAppointment.LDLAppID = Convert.ToInt16(lblLDLApplicationID.Text);
+                _TestAppointment.AppointmentDate = dtbDate.Value;
+                _TestAppointment.PaidFees = clsTestTypes.FindTestTypeInfoByID(1).TestTypeFees;
+                _TestAppointment.CreatedByUser = clsUserLoginInfo.UserID;
+                _TestAppointment.IsLocked = 0;
+
         }
 
         private void _MessageSuccssefulToAddTestAppointment()
@@ -147,7 +166,17 @@ namespace Project_DVLD
         private void btnSave_Click(object sender, EventArgs e)
         {
             _FillTestAppointmentDate();
-            _TestAppointments.Save();        
+
+
+            _TestAppointment.Save();
+            if (Convert.ToInt16(lblTrial.Text) != 0)
+            {
+                _RetakeTest.TestAppointmentID = _TestAppointment.TestAppointmentID;
+                _RetakeTest.PaidFees = 5;
+
+                _RetakeTest.AddRetakeTest();
+            }
+
             _MessageSuccssefulToAddTestAppointment();
             this.Close();
         }
